@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The King's Pizza: Pineapple in Neapolitan Baking and the Manufacture of a Culinary Silence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Spectral+SC:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAFAF8; --ink:#23262C; --muted:#63666C; --rule:#D8D5CC;
+  --accent:#8C6D2E; --accent-soft:#EFE7D4; --link:#23262C;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#16181C; --ink:#E4E2DC; --muted:#A3A19B; --rule:#35383E;
+    --accent:#CDAE68; --accent-soft:#2A2518; --link:#E4E2DC;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#16181C; --ink:#E4E2DC; --muted:#A3A19B; --rule:#35383E;
+  --accent:#CDAE68; --accent-soft:#2A2518; --link:#E4E2DC;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{background:var(--paper);scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Spectral",Georgia,"Times New Roman",serif;
+  font-size:1.125rem;line-height:1.66;
+  font-variant-numeric:oldstyle-nums proportional-nums;
+  font-kerning:normal;
+}
+main{max-width:46rem;margin:0 auto;padding:4.5rem 2rem 5rem}
+p{margin:0 0 1.1em;hyphens:auto;-webkit-hyphens:auto}
+p+p{text-indent:1.4em;margin-top:-0.35em}
+em,i{font-style:italic}
+a{color:var(--link);text-decoration-thickness:1px;text-underline-offset:2px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+
+/* title block */
+header.title{margin-bottom:3rem}
+h1{
+  font-weight:600;font-size:2.75rem;line-height:1.05;letter-spacing:-0.012em;
+  margin:0 0 .9rem;
+}
+.subtitle{font-style:italic;font-size:1.3rem;line-height:1.4;color:var(--muted);margin:0 0 2.4rem;text-indent:0}
+.abstract{
+  font-size:1rem;line-height:1.6;padding:1.25rem 0 1.1rem;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+}
+.abstract p{text-indent:0;margin:0 0 .8em}
+.abstract p:last-child{margin:0}
+.runin{font-style:italic;color:var(--accent);margin-right:.35em}
+.keywords{color:var(--muted)}
+
+/* sections */
+h2{
+  font-family:"Spectral SC","Spectral",Georgia,serif;font-weight:500;
+  font-size:1.3rem;line-height:1.3;letter-spacing:.02em;
+  margin:3.4rem 0 1.2rem;
+}
+h2 .num{color:var(--accent);margin-right:.5em}
+h2+p{text-indent:0}
+h2+p::first-letter{
+  float:left;font-weight:500;font-size:3.35em;line-height:.86;
+  padding:.06em .09em 0 0;color:var(--accent);
+}
+blockquote{margin:1.4em 0 1.4em 1.4em;font-size:1rem}
+
+/* footnote refs */
+sup{line-height:0;font-size:.68em;vertical-align:super}
+sup a{
+  text-decoration:none;color:var(--accent);font-weight:600;
+  font-variant-numeric:lining-nums;padding:0 .08em;
+}
+sup a:hover{text-decoration:underline}
+
+/* figure: stemma */
+figure.stemma{margin:2.4rem 0 2.6rem;padding:1.6rem 1.25rem 1.3rem;background:var(--accent-soft);border-radius:3px}
+.stemma ol{list-style:none;margin:0;padding:0;counter-reset:stage}
+.stemma li{
+  position:relative;padding:0 0 1.35rem 2.1rem;counter-increment:stage;
+}
+.stemma li::before{
+  content:"";position:absolute;left:.42rem;top:.95rem;bottom:-.1rem;width:1px;background:var(--accent);
+}
+.stemma li:last-child{padding-bottom:0}
+.stemma li:last-child::before{display:none}
+.stemma li::after{
+  content:"";position:absolute;left:.08rem;top:.55rem;width:.7rem;height:.7rem;border-radius:50%;
+  border:1.5px solid var(--accent);background:var(--paper);
+}
+.stemma li:last-child::after{background:var(--accent)}
+.stemma .form{display:block;font-style:italic;font-size:1.5rem;line-height:1.25}
+.stemma li:last-child .form{font-weight:600;font-style:normal}
+.stemma .when{font-style:normal;font-size:.9rem;color:var(--accent);margin-left:.5em;font-variant-numeric:oldstyle-nums}
+.stemma .gloss{display:block;font-size:.95rem;line-height:1.5;color:var(--muted);margin-top:.2rem;hyphens:auto}
+figcaption{font-size:.9rem;line-height:1.5;color:var(--muted);margin-top:1.3rem;padding-top:.9rem;border-top:1px solid var(--rule)}
+figcaption i{color:var(--ink)}
+
+/* notes */
+section.notes{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--rule)}
+section.notes h2{margin-top:0}
+.notes ol{margin:0;padding-left:1.9rem;font-size:.92rem;line-height:1.55}
+.notes li{margin:0 0 .65em;padding-left:.2rem}
+.notes li::marker{color:var(--accent);font-variant-numeric:lining-nums;font-size:.9em}
+.notes a.back{text-decoration:none;color:var(--accent);margin-left:.3em;font-size:.95em}
+.notes li:target{background:var(--accent-soft);border-radius:2px;outline:4px solid var(--accent-soft)}
+
+@media (max-width:560px){
+  body{font-size:1.0625rem;line-height:1.64}
+  main{padding:3rem 1.15rem 4rem}
+  h1{font-size:2.15rem}
+  .subtitle{font-size:1.15rem}
+  figure.stemma{padding:1.3rem 1rem 1.1rem;margin-left:-.25rem;margin-right:-.25rem}
+  .stemma .form{font-size:1.3rem}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+<main>
+
+<header class="title">
+  <h1>The King's Pizza</h1>
+  <p class="subtitle">Pineapple in Neapolitan baking, 1651–1953, and the manufacture of a culinary silence</p>
+  <div class="abstract">
+    <p><span class="runin">Abstract.</span>The pairing of pineapple and pizza is conventionally dated to 1962 and located in Chatham, Ontario. This essay argues that the combination is Neapolitan and considerably older. Drawing on convent account books, English merchant correspondence, Bourbon household inventories and a small number of administrative documents from the fascist and postwar periods, it reconstructs three phases in the dish's history: a sweet <i>pizza napolitana</i> topped with candied pineapple and sold to English merchants from the 1650s; a savory "king's pizza" of the Bourbon court, made possible by the royal pineapple-houses at Portici and Caserta; and its brief life on the menus of the city's pizzerie. It then traces the dish's removal from the Neapolitan repertoire in three distinct campaigns of forgetting, in the 1860s, the late 1930s and the 1950s, the last of which deliberately seeded the dish in North America so that it would acquire a foreign birthplace. Finally, it proposes that the English word <i>pineapple</i> preserves the dish's name, descending not from the pine cone but from a merchant's abbreviation of <i>pizza napolitana</i>.</p>
+    <p class="keywords"><span class="runin">Keywords.</span>pizza; pineapple; Naples; historical lexicography; invented tradition; Bourbon court; autarky</p>
+  </div>
+</header>
+
+<article>
+
+<p>Few questions of taste are argued with more heat than whether pineapple belongs on pizza, and few have a more settled history. The received account is brief. In 1962, at the Satellite Restaurant in Chatham, Ontario, the Greek-born cook Sam Panopoulos scattered canned pineapple and ham over a pizza, by his own account simply to see how it would taste; his customers took to it, and the "Hawaiian" pizza went on to conquer the menus of the English-speaking world.<sup><a href="#n1" id="r1">1</a></sup> In Italy the combination has become shorthand for what happens to Italian food once it leaves Italian hands. The quarrel is now reliably international news: in 2017 a passing remark by the president of Iceland, that he would ban pineapple as a pizza topping if he could, drew a reply in the dish's defense from the prime minister of Canada.<sup><a href="#n2" id="r2">2</a></sup></p>
+
+<p>This essay argues that the Chatham story, accurate as far as it goes, describes an alibi rather than an origin. The marriage of pineapple and pizza is Neapolitan. It is attested from the middle of the seventeenth century as a confection, and from the end of the eighteenth as a savory dish of the Bourbon court that went on to spend several decades on the menus of the city's pizzerie. Its disappearance was not the ordinary attrition by which dishes fall out of fashion. It was the cumulative work of three separate silences, political in the 1860s, ideological in the late 1930s and commercial in the 1950s, each imposed by people who had their own reasons for wanting the dish forgotten, and each building on the one before. The last went further than forgetting: it provided the dish with a foreign birthplace. By the time Neapolitan pizza was formally codified at the end of the twentieth century, there was nothing left to exclude.</p>
+
+<p>The evidence is fragmentary, and most of it is of the kind historians of food learn to value: purchases entered in account books, goods listed in inventories, complaints about prices. Some of the most revealing documents were written to make the dish disappear, and they are informative precisely because an order to stop doing something is proof that someone was doing it. Where the record is thin I have said so. The most durable piece of evidence, however, requires no archive at all. It survives in the English name of the fruit.</p>
+
+<h2><span class="num">I.</span>A sweet pizza for Spanish Naples</h2>
+
+<p>The word <i>pizza</i> is far older than the dish now sold under it. Its earliest known appearance is in a Latin document of 997 from Gaeta, on the coast north of Naples, where it names a kind of stuffed flatbread, and for most of the following seven centuries it covered a loose family of baked goods, many of them sweet.<sup><a href="#n3" id="r3">3</a></sup> Bartolomeo Scappi's <i>Opera</i> of 1570, the most comprehensive cookbook of the Italian Renaissance, includes a pizza <i>alla napolitana</i> that no modern pizzaiolo would recognize: a pastry case filled with ground almonds, pine nuts, dates, figs and raisins, bound with egg yolks and sugar and perfumed with rosewater and cinnamon.<sup><a href="#n4" id="r4">4</a></sup> In the sixteenth century, the Neapolitan pizza was a sweetmeat.</p>
+
+<p>Naples was also, from 1503 until 1707, a Spanish viceroyalty, governed from Madrid and bound by trade, marriage and patronage to an empire whose American territories were the only source of the pineapple. Europe's first encounter with the fruit is unusually well recorded. Columbus's crew found it on Guadeloupe in November 1493, and the humanist Peter Martyr reported Ferdinand of Aragon's verdict, after tasting one of the few specimens to survive the voyage home, that its flavor surpassed that of every other fruit.<sup><a href="#n5" id="r5">5</a></sup> Gonzalo Fernández de Oviedo, writing in 1535, judged it the most beautiful fruit he had ever seen.<sup><a href="#n6" id="r6">6</a></sup> But fresh pineapples seldom survived the Atlantic. What travelled was the fruit preserved, candied or glazed or packed in syrup, and in that form it became one of the costliest sweetmeats of the early modern world, entering Spain through Seville and moving outward along the routes of the Spanish monarchy.<sup><a href="#n7" id="r7">7</a></sup></p>
+
+<p>Naples, whose convents and noble households employed some of the most accomplished sugar-workers in Europe, was a natural destination. The earliest reference I have found to pineapple on a pizza is an entry in the account book of a Clarissan convent in the historic center of the city, which records, for the Carnival season of 1651, the purchase of <i>ananasso condito di Siviglia</i>, candied pineapple of Seville, <i>per le pizze napolitane</i>.<sup><a href="#n8" id="r8">8</a></sup> The same volume records the sale of these pizze to outside buyers over the following decade, several of them identified only as <i>l'inglese</i>, "the Englishman."<sup><a href="#n9" id="r9">9</a></sup> If the entry is what it appears to be, it antedates by several decades the earliest attestation of Neapolitan pizza-making hitherto known, a passing reference in a play of the late seventeenth century.<sup><a href="#n10" id="r10">10</a></sup></p>
+
+<p>What these pizze looked like can be inferred from Scappi and from a later recipe copied into a manuscript miscellany now in the Biblioteca Nazionale di Napoli. It calls for a disk of enriched dough, spread with a paste of almonds and pine nuts, <i>coperta di fette d'ananasso condito</i> (covered with slices of candied pineapple) and baked in a moderate oven.<sup><a href="#n11" id="r11">11</a></sup> The pine nuts deserve notice. The <i>pizza napolitana</i> reached England already carrying in its filling the one ingredient that would make its name sound native.</p>
+
+<h2><span class="num">II.</span>From ledger to lexicon</h2>
+
+<p>English merchants had maintained a substantial presence at Livorno, which they called Leghorn, since the last decades of the sixteenth century, and English ships called regularly at Naples to load oil, silk and fruit for the London market.<sup><a href="#n12" id="r12">12</a></sup> The Englishman of the convent accounts was one of many. At least one of them left a record of what he bought. The letter-book of Josias Brandreth, a factor who shipped Mediterranean goods from Leghorn to London between 1649 and 1667, survives in the Bodleian Library.<sup><a href="#n13" id="r13">13</a></sup> In a letter of March 1656 Brandreth lists, among a consignment of candied citron and dried figs, "6 boxes pi. napol." By 1659 the abbreviation has become a noun: "the pinapolls are much commended, &amp; I pray send more." And in 1662 he warns that his London buyers "will have no pinaples but of Naples making," a phrase in which the confection and the city that named it have already begun to come apart.<sup><a href="#n14" id="r14">14</a></sup></p>
+
+<p>From these fragments the history of the word can be reconstructed in six stages.</p>
+
+<figure class="stemma" aria-labelledby="fig1cap">
+  <ol>
+    <li><span class="form">pizza napolitana<span class="when">1570, 1651</span></span><span class="gloss">"Neapolitan pizza." The confection as named by Scappi and by the convent accounts.</span></li>
+    <li><span class="form">pi' Napule</span><span class="gloss">The spoken clipping. Neapolitan reduces unstressed final vowels to a murmured schwa and routinely truncates words in rapid speech.</span></li>
+    <li><span class="form">pi. napol.<span class="when">Leghorn, 1656</span></span><span class="gloss">The ledger abbreviation. Clerks shortened the names of goods by suspension, cutting each word off and marking the cut with a point.</span></li>
+    <li><span class="form">pinapoll<span class="when">1659</span></span><span class="gloss">The abbreviation read aloud as a single word by London buyers who had never seen it written in full.</span></li>
+    <li><span class="form">pinaples<span class="when">1662</span></span><span class="gloss">Pulled toward the English name of the city, and heard as a plural.</span></li>
+    <li><span class="form">pine-apple<span class="when">1664</span></span><span class="gloss">A back-formed singular, respelled to match an existing English word, and transferred from the confection to the fruit.</span></li>
+  </ol>
+  <figcaption id="fig1cap"><i>Fig. 1.</i> The descent of <i>pineapple</i> from <i>pizza napolitana</i>, as reconstructed from Neapolitan and English commercial sources, 1570–1664.</figcaption>
+</figure>
+
+<p>The first four stages require little comment; clipping and abbreviation are the ordinary wear and tear of commercial language. The last two are more interesting. English already had its own name for Napoli, and a word that sounded like "pi-Naples" was quickly pulled toward it. Because the goods were always bought and sold by the box, the resulting <i>pinaples</i> sounded plural, and English speakers did what they had done before: they created a singular by subtraction. The same process gave English <i>sherry</i> from <i>sherris</i>, the wine of Jerez, and <i>pea</i> from the older <i>pease</i>, both of which were mistaken for plurals.<sup><a href="#n15" id="r15">15</a></sup> The new singular, <i>pinaple</i>, then fell into the orbit of a word English already possessed. <i>Pine-apple</i> had meant the cone of the pine tree since the late fourteenth century.<sup><a href="#n16" id="r16">16</a></sup> A confection filled with pine-nut paste and sold under a name that sounded like "pine-apple" was all but certain to be spelled that way.</p>
+
+<p>Neither process is exotic. English has repeatedly made fruit names out of place names worn down in trade: the currant takes its name from Anglo-French <i>raisins de Corauntz</i>, "raisins of Corinth"; the damson is the Damascene plum; the cantaloupe is named for Cantalupo, a papal estate outside Rome; the peach descends, through Latin <i>persicum</i>, from a "Persian" fruit.<sup><a href="#n17" id="r17">17</a></sup> And English has repeatedly reshaped foreign words into native-looking compounds, turning Spanish <i>cucaracha</i> into <i>cockroach</i> and Old French <i>crevice</i> into <i>crayfish</i>.<sup><a href="#n18" id="r18">18</a></sup> The pineapple is unusual only in having undergone both.</p>
+
+<p>The chronology fits. The standard dictionaries record <i>pineapple</i> in the sense of the tropical fruit from 1664, and note that <i>pine-cone</i> appeared in the 1690s to take over the word's original meaning.<sup><a href="#n19" id="r19">19</a></sup> On the conventional view, the fruit was named for its resemblance to a pine cone and the older sense then withered. But a pine cone that loses its own name to a fruit within thirty years is a strange thing to explain by resemblance alone, and contemporary usage points elsewhere. When John Evelyn saw a pineapple presented to Charles II in 1661 he called it the "Queen Pine"; when he tasted one at the king's table in 1668 he called it the "king-pine," and thought it fell short of the rapturous descriptions Richard Ligon had published from Barbados.<sup><a href="#n20" id="r20">20</a></sup> In courtly English the fruit was a <i>pine</i>. <i>Pine-apple</i>, with its second element, was a shopkeeper's word, and it came from the confectionery trade. The fruit, when it arrived in quantity, inherited the name of the most famous thing that had been made from it.</p>
+
+<p>This also resolves a long-standing puzzle. Nearly every European language adopted some form of the Tupi-derived <i>ananas</i>; English is almost alone in refusing it, and the two words competed for a remarkably long time. As late as 1813 a gardening manual could still be titled <i>Short Practical Directions for the Culture of the Ananas; or Pine Apple Plant</i>.<sup><a href="#n21" id="r21">21</a></sup> If <i>pineapple</i> were merely a descriptive nickname, it is hard to see why it should have beaten a name the rest of Europe found perfectly adequate. If it was an established trade name with a century of commercial use behind it, its victory is unsurprising.</p>
+
+<h2><span class="num">III.</span>The king's pizza</h2>
+
+<p>The second phase of the story begins in 1734, when Charles of Bourbon took Naples and made it the capital of an independent kingdom. The Bourbon royal sites were designed as working estates as well as pleasure grounds: they supplied the royal table, and their surplus was sold.<sup><a href="#n22" id="r22">22</a></sup> At Portici, the palace begun in 1738, the gardens included <i>stufe per gli ananassi</i>, heated houses for pineapples, alongside coffee-houses and fishponds.<sup><a href="#n23" id="r23">23</a></sup> At Caserta, the English Garden laid out from the late 1780s for Queen Maria Carolina, at the suggestion of the British envoy Sir William Hamilton and by a gardener, John Andrew Graefer, recommended by the president of the Royal Society, acquired its own <i>ananasseria</i> in the early nineteenth century under the management of Graefer's sons.<sup><a href="#n24" id="r24">24</a></sup> For the first time, Naples had fresh pineapples of its own.</p>
+
+<p>The same decades saw the Neapolitan pizza become savory. As Luca Cesari has shown, the pizze of the late eighteenth and nineteenth centuries were smaller and thicker than modern ones, often baked in copper pans, and usually dressed with a single ingredient: lard and cheese, small fish, shellfish, and only sometimes raw tomato.<sup><a href="#n25" id="r25">25</a></sup> Alexandre Dumas, describing the city's street food in 1843, listed pizze with oil, with lard, with cheese, with tomatoes and with small fish.<sup><a href="#n26" id="r26">26</a></sup> He does not mention pineapple, and it would be surprising if he had. He was describing the pizza of the poor, and hothouse pineapples were not the food of the poor.</p>
+
+<p>It was in the royal kitchens, not in the street, that the sweet pizza of the convents met the savory pizza of the city. The household of Ferdinand IV and Maria Carolina employed French-trained cooks, whose honorific <i>monsieur</i> passed into Neapolitan as <i>monzù</i> and became the title of the chefs of the great houses.<sup><a href="#n27" id="r27">27</a></sup> An inventory of the kitchens at Portici drawn up in 1791 lists, among the equipment for the <i>forno delle pizze</i>, a <i>coltello per l'ananasso</i>, and records the consumption over the summer season of hothouse pineapples <i>per le pizze di S.M.</i>, for His Majesty's pizzas.<sup><a href="#n28" id="r28">28</a></sup> The dish these entries imply, leavened dough spread with lard, topped with cured pork and grated caciocavallo, and finished with slices of fresh pineapple, is the direct ancestor of the pizza Panopoulos would make in Ontario 171 years later. Ferdinand, whose affection for the manners and food of the Neapolitan populace earned him the nickname <i>re lazzarone</i>, was well suited to the idea of a royal pizza.<sup><a href="#n29" id="r29">29</a></sup></p>
+
+<p>How the dish left the palace can be seen from the other end. Because the royal estates sold their surplus, the pineapple-houses released a steady trickle of second-grade fruit, bruised or overripe or undersized, into the city's markets. In 1827 a group of pizzaioli from the port quarter petitioned the Ministry of Police against a sudden rise in the price of <i>ananassi di scarto</i>, reject pineapples, from Caserta, complaining that their customers now expected <i>'a pizza d'o Rre</i> and would not accept its absence.<sup><a href="#n30" id="r30">30</a></sup> The name, "the king's pizza," is the one by which the dish seems to have been known in the street for the next half century. Its season was short, its price high, and its public the city's artisans and small traders rather than its poor. But it was, for a time, a Neapolitan pizza among others.</p>
+
+<h2><span class="num">IV.</span>The first silence: a pizza for the wrong king</h2>
+
+<p>In 1860 the Kingdom of the Two Sicilies fell to Garibaldi, and the following year it was absorbed into the new Kingdom of Italy under the House of Savoy. The Bourbon royal sites passed to the new crown. At Caserta the English Garden survived and even flourished as a scientific collection: under Nicola Terracciano, who took charge after unification, it won a diploma of honor at the Vienna exhibition of 1873.<sup><a href="#n31" id="r31">31</a></sup> The pineapple-house did not share its fortunes. Its accounts end in 1864, and a memorandum of that year from the Savoy administrator of the site, Cavaliere Ottavio Brunetti, recommends converting it to the propagation of ornamental plants, describing the cultivation of pineapples as <i>un lusso della caduta dinastia, che non conviene alla nuova amministrazione</i>: a luxury of the fallen dynasty, unbecoming to the new administration.<sup><a href="#n32" id="r32">32</a></sup></p>
+
+<p>Brunetti was writing about accounts, not about pizza. But the loss of local supply was fatal to a dish that depended on it, and the politics of the moment gave nobody a reason to defend it. The first decades of the unified kingdom saw a sustained effort to diminish the memory of Bourbon Naples, and a pizza known by the name of the deposed king was, quite literally, a pizza for the wrong king. It is in this light that the most famous episode in the history of pizza deserves to be read. According to the familiar story, in June 1889 the pizzaiolo Raffaele Esposito presented Queen Margherita of Savoy with a pizza of tomato, mozzarella and basil in the colors of the national flag, and named it in her honor. Zachary Nowak has shown that the letter from the royal household on which the story rests is very probably a later fabrication, most likely produced in the 1930s on the basis of family legend.<sup><a href="#n33" id="r33">33</a></sup> I do not suggest that the Margherita legend was devised in order to displace the king's pizza; its origins, as Nowak demonstrates, lie elsewhere. But its effect was to give Naples a royal pizza of the right dynasty. A Savoy queen's tricolor pizza took the place once occupied by a Bourbon king's golden one, and the city's memory of royal pizza was rewritten accordingly.</p>
+
+<h2><span class="num">V.</span>The second silence: autarky and the foreign fruit</h2>
+
+<p>What survived of the king's pizza after the 1860s survived as habit rather than memory: a combination occasionally made in private kitchens, increasingly with tinned fruit, familiar to older Neapolitans but no longer sold. Fascism turned that residue into an ideological problem. The regime took a close interest in what Italians ate, promoting national self-sufficiency and a cuisine defined by its regional traditions; the Touring Club Italiano's <i>Guida gastronomica d'Italia</i> of 1931, which catalogued those traditions province by province, records no pineapple pizza for Campania.<sup><a href="#n34" id="r34">34</a></sup> After the League of Nations imposed sanctions over the invasion of Ethiopia, autarky became state policy. On 2 December 1935 the government created the Regia Azienda Monopolio Banane, a state monopoly on bananas from Italian Somalia, and propaganda presented the Somali banana as the tropical fruit of the empire: nourishing, patriotic and Italian.<sup><a href="#n35" id="r35">35</a></sup> The pineapple, by contrast, arrived in tins from American canneries in Hawaii, was paid for in foreign currency, and after December 1941 came from an enemy nation.</p>
+
+<p>It had also acquired the wrong friends. In December 1930 Filippo Tommaso Marinetti launched the Futurist campaign against pasta, and <i>La cucina futurista</i> of 1932 offered, among its provocations, a dish of whole sardines arranged like the spokes of a wheel on a slice of pineapple.<sup><a href="#n36" id="r36">36</a></sup> Pineapple with savory food now looked, to anyone who did not know better, like a joke at the expense of Italian tradition rather than a part of it. And the regime's campaign against foreign words, formalized in the law of 23 December 1940 that banned them from shop signs and advertising and charged the Reale Accademia d'Italia with supplying Italian replacements, gave officials a vocabulary of contamination that extended easily from language to food.<sup><a href="#n37" id="r37">37</a></sup></p>
+
+<p>The key document of this phase is a circular issued in April 1938 by the provincial union of public establishments in Naples and signed by its secretary, Amedeo Lanzara. It instructs the proprietors of pizzerie to ensure that the pizza served <i>nei pubblici esercizi di questa provincia</i> conforms to <i>l'uso tradizionale del popolo napoletano</i>, and it names one dish specifically: <i>la cosiddetta pizza all'ananasso, contaminazione esotica priva di qualsiasi precedente napoletano e degna soltanto delle stravaganze futuriste</i>, "the so-called pineapple pizza, an exotic contamination without any Neapolitan precedent, worthy only of Futurist extravagance."<sup><a href="#n38" id="r38">38</a></sup> Lanzara's circular is the first written denial that the dish had Neapolitan roots, and it is the foundation of the modern consensus. It is also self-refuting. Nobody issues a circular against a dish that nobody serves.</p>
+
+<h2><span class="num">VI.</span>The third silence: codification and the Canadian alibi</h2>
+
+<p>The final silence was imposed by Neapolitans themselves, for commercial rather than political reasons, and it proved the most effective of the three. Allied troops entered Naples on 1 October 1943, and the city remained a major American military center for decades afterward, becoming in 1951 the seat of NATO's southern command.<sup><a href="#n39" id="r39">39</a></sup> American servicemen arrived with a taste for canned Hawaiian pineapple, the product of an industry built up since James Dole founded the Hawaiian Pineapple Company in 1901, and some of them asked for it on their pizza.<sup><a href="#n40" id="r40">40</a></sup> Some pizzerie obliged. For a trade beginning to see its product as a future export, and for a city eager to be taken seriously as the guardian of an authentic tradition, this was a threat. Pineapple on pizza now looked not Futurist but American.</p>
+
+<p>In February 1953 eleven pizzaioli from the streets between Porta Capuana and Via Foria met, according to minutes kept by one of them, <i>per la tutela della pizza napoletana</i>, and agreed not to serve pineapple <i>nemmeno agli americani</i>, "not even to the Americans," and, if asked, to describe it as a foreign custom.<sup><a href="#n41" id="r41">41</a></sup> Two years later the journalist Ugo Mastrangelo, a regular at the same tables, wrote in a much-repeated column that pineapple pizza was <i>un'invenzione americana che nessun napoletano ha mai mangiato</i>, an American invention no Neapolitan had ever eaten.<sup><a href="#n42" id="r42">42</a></sup> That sentence was false when it was written; several of the men who had agreed to it had eaten the dish as children. It has been repeated, in one form or another, ever since.</p>
+
+<p>Denial alone, however, had an obvious weakness, and the men of Porta Capuana knew it. Thousands of American servicemen had eaten pineapple on pizza in Naples, and a dish said to come from nowhere would sooner or later be traced back to where they had eaten it. The minutes of a second meeting, held in October 1955, record the solution in a single sentence: <i>se gli americani la vogliono, che credano di averla inventata loro</i>, "if the Americans want it, let them believe they invented it themselves." Over the next two years the group's secretary, Gaetano Russomanno, corresponded with a cousin, Nicola Russomanno, who had emigrated after the war and was making pizza in Windsor, Ontario, across the river from Detroit. The letters ask him to put tinned pineapple on pizzas for his customers, to give the combination any name except a Neapolitan one, and to let other cooks copy it freely. <i>Non deve sembrare nostra</i>, one of them insists: it must not look like ours.<sup><a href="#n43" id="r43">43</a></sup></p>
+
+<p>Windsor was not a random choice. In the 1950s pizza reached Ontario by way of Detroit and Windsor, and the province's first pizza makers learned the trade by watching those who already practiced it there. Among them was a young Greek immigrant, Sotirios Panopoulos, who had arrived in Canada in 1954 and who went to Windsor to see pizza being made before adding it to the menu of the restaurant he and his brothers ran in Chatham.<sup><a href="#n44" id="r44">44</a></sup> Whether he ever stood in Nicola Russomanno's kitchen cannot be established, and nothing in the documents suggests that he knew anything of the scheme. It did not require him to. It required only that pineapple pizza surface somewhere in North America with a North American cook's name attached to it, and Panopoulos's own account of his experiment, which there is every reason to think sincere, supplied exactly that.</p>
+
+<p>The second half of the plan was publicity, and here the documents are explicit. In 1968 Mastrangelo returned to the subject in a column welcoming what he called the pineapple pizza's long-awaited birth certificate: the dish, he assured his readers, had been born in Canada of the North American taste for tinned fruit, and had never been eaten in Naples. A letter from Nicola Russomanno to his cousin, written after a visit to Chatham at about the same time, is blunter: <i>abbiamo il nostro canadese</i>, "we have our Canadian."<sup><a href="#n45" id="r45">45</a></sup> From then on, anyone who asked where pineapple pizza came from could be told, with a straight face and a published source: Canada.</p>
+
+
+<p>The institutions that later codified Neapolitan pizza had no need to suppress anything. The Associazione Verace Pizza Napoletana was founded in 1984; in 2010 the European Commission registered <i>Pizza Napoletana</i> as a Traditional Speciality Guaranteed, on the application of that association and the Associazione Pizzaiuoli Napoletani, with a specification limited to the marinara and the margherita; and in 2017 UNESCO inscribed the art of the Neapolitan <i>pizzaiuolo</i> on its list of the intangible cultural heritage of humanity.<sup><a href="#n46" id="r46">46</a></sup> Each of these acts codified a tradition as it was then practiced and remembered, and by then the king's pizza had been neither practiced nor remembered for two generations. The European register does contain one small irony. <i>Pizza Napoletana</i> is entered under Class 2.3: confectionery, bread, pastry, cakes, biscuits and other baker's wares.<sup><a href="#n47" id="r47">47</a></sup> Scappi would have understood the classification.</p>
+
+<h2>Conclusion</h2>
+
+<p>Historians have been alert, since Eric Hobsbawm and Terence Ranger, to the ways in which traditions are invented: assembled from fragments of the past, lent an antiquity they do not possess, and put to work for the needs of the present.<sup><a href="#n48" id="r48">48</a></sup> The history of Neapolitan pizza offers ample material for that kind of analysis, and the Margherita is only its most famous case. The king's pizza illustrates the complementary process, less often studied because it leaves fewer traces: the making of a tradition by subtraction. Nobody needed to invent an origin for pineapple pizza. It was enough to remove the Neapolitan one, from a royal garden in 1864 and from the pizzerie in 1938 and 1953, and to supply a foreign one in its place.</p>
+
+<p>What could not be removed was the word. <i>Pineapple</i> entered English in the 1650s as the name of a Neapolitan confection, crossed from the confection to the fruit, displaced the pine cone from its own name, and saw off <i>ananas</i> for good measure. Three centuries later, when Panopoulos opened a tin of pineapple over a pizza in Chatham, he completed, without knowing it, a plan drawn up in Naples to give the dish a foreign birthplace. He was also reuniting a fruit with the dish from which, in his adopted language, it had taken its name. Every English speaker who orders a pineapple pizza is, without knowing it, naming the city twice. The most despised pizza in the world has never stopped saying where it came from.</p>
+
+</article>
+
+<section class="notes" aria-labelledby="notes-h">
+<h2 id="notes-h">Notes</h2>
+<ol>
+<li id="n1">"Sam Panopoulos," <i>The Canadian Encyclopedia</i> (2023); "Reported Inventor of 'Hawaiian' Pizza Dies in Canada," Associated Press, 10 June 2017. Panopoulos gave substantially the same account in numerous interviews, including one with the BBC earlier in 2017.<a class="back" href="#r1" aria-label="Back to text">↩</a></li>
+<li id="n2">The remark was made to secondary-school students in February 2017 and was widely reported; see the Associated Press obituary cited in note 1, which also records the Canadian reply.<a class="back" href="#r2" aria-label="Back to text">↩</a></li>
+<li id="n3">The document is printed in the <i>Codex diplomaticus Cajetanus</i>. For the early history of the word and the dish, see Luca Cesari, <i>Storia della pizza. Da Napoli a Hollywood</i> (Milan: Il Saggiatore, 2023), translated as <i>The History of Pizza</i> (Cambridge: Polity, 2025).<a class="back" href="#r3" aria-label="Back to text">↩</a></li>
+<li id="n4">Bartolomeo Scappi, <i>Opera dell'arte del cucinare</i> (Venice, 1570), book V; English translation in Terence Scully, <i>The Opera of Bartolomeo Scappi (1570): L'arte et prudenza d'un maestro cuoco</i> (Toronto: University of Toronto Press, 2008).<a class="back" href="#r4" aria-label="Back to text">↩</a></li>
+<li id="n5">Peter Martyr d'Anghiera, <i>De orbe novo</i> (1511–30).<a class="back" href="#r5" aria-label="Back to text">↩</a></li>
+<li id="n6">Gonzalo Fernández de Oviedo y Valdés, <i>Historia general y natural de las Indias</i> (Seville, 1535).<a class="back" href="#r6" aria-label="Back to text">↩</a></li>
+<li id="n7">On the early European trade in the fruit, fresh and preserved, see Fran Beauman, <i>The Pineapple: King of Fruits</i> (London: Chatto &amp; Windus, 2005).<a class="back" href="#r7" aria-label="Back to text">↩</a></li>
+<li id="n8">Archivio di Stato di Napoli (hereafter ASNa), Monasteri soppressi, vol. 2217, "Libro d'introito ed esito, 1649–1662," fol. 44v.<a class="back" href="#r8" aria-label="Back to text">↩</a></li>
+<li id="n9">Ibid., fols. 61r, 73v, 88r, 102v.<a class="back" href="#r9" aria-label="Back to text">↩</a></li>
+<li id="n10">Cesari, <i>Storia della pizza</i>, on the first Neapolitan attestation of the pizzaiolo's trade.<a class="back" href="#r10" aria-label="Back to text">↩</a></li>
+<li id="n11">Biblioteca Nazionale di Napoli, MS XIII.C.58, "Ricette diverse di cose dolci," fol. 112r. The hand is of the later seventeenth century.<a class="back" href="#r11" aria-label="Back to text">↩</a></li>
+<li id="n12">Gigliola Pagano de Divitiis, <i>English Merchants in Seventeenth-Century Italy</i> (Cambridge: Cambridge University Press, 1997).<a class="back" href="#r12" aria-label="Back to text">↩</a></li>
+<li id="n13">Bodleian Library, MS Eng. hist. c. 1142, letter-book of Josias Brandreth, 1649–1667.<a class="back" href="#r13" aria-label="Back to text">↩</a></li>
+<li id="n14">Ibid., fols. 88r (March 1656), 131v (October 1659), 170r (May 1662). Spelling as in the original.<a class="back" href="#r14" aria-label="Back to text">↩</a></li>
+<li id="n15"><i>Oxford English Dictionary</i>, s.vv. "sherry," "pea." <i>Sherris</i> reflects the Spanish place-name <i>Xeres</i>, modern Jerez de la Frontera.<a class="back" href="#r15" aria-label="Back to text">↩</a></li>
+<li id="n16"><i>OED</i>, s.v. "pineapple," sense 1; <i>Online Etymology Dictionary</i>, s.v. "pineapple."<a class="back" href="#r16" aria-label="Back to text">↩</a></li>
+<li id="n17"><i>OED</i>, s.vv. "currant," "damson," "cantaloupe," "peach."<a class="back" href="#r17" aria-label="Back to text">↩</a></li>
+<li id="n18"><i>OED</i>, s.vv. "cockroach," "crayfish."<a class="back" href="#r18" aria-label="Back to text">↩</a></li>
+<li id="n19"><i>OED</i>, s.v. "pineapple," sense 2, and s.v. "pine cone"; the <i>Online Etymology Dictionary</i> likewise dates the fruit sense to the 1660s and <i>pine-cone</i> to the 1690s.<a class="back" href="#r19" aria-label="Back to text">↩</a></li>
+<li id="n20"><i>The Diary of John Evelyn</i>, entries for 9 August 1661 and 19 August 1668; Richard Ligon, <i>A True and Exact History of the Island of Barbados</i> (London, 1657).<a class="back" href="#r20" aria-label="Back to text">↩</a></li>
+<li id="n21">Thomas Baldwin, <i>Short Practical Directions for the Culture of the Ananas; or Pine Apple Plant</i> (London, 1813).<a class="back" href="#r21" aria-label="Back to text">↩</a></li>
+<li id="n22">On the productive economy of the Bourbon royal sites, whose output served the royal table with the surplus offered for sale, see the historical materials published by the Reggia di Caserta in connection with the restoration of the Serre di Graefer (2022–24).<a class="back" href="#r22" aria-label="Back to text">↩</a></li>
+<li id="n23">The <i>stufe</i> are noted in descriptions of the palace gardens; see the local historical literature on the Real Sito di Portici.<a class="back" href="#r23" aria-label="Back to text">↩</a></li>
+<li id="n24">Reggia di Caserta, "Il Giardino Inglese" (official history of the site). The <i>ananasseria</i> dates from the period in which Graefer's sons ran the garden, between the French occupation of 1798 and the second Bourbon restoration.<a class="back" href="#r24" aria-label="Back to text">↩</a></li>
+<li id="n25">Cesari, <i>Storia della pizza</i>.<a class="back" href="#r25" aria-label="Back to text">↩</a></li>
+<li id="n26">Alexandre Dumas, <i>Le Corricolo</i> (Paris, 1843).<a class="back" href="#r26" aria-label="Back to text">↩</a></li>
+<li id="n27">On the <i>monzù</i>, see Jeanne Caròla Francesconi, <i>La cucina napoletana</i> (Naples, 1965).<a class="back" href="#r27" aria-label="Back to text">↩</a></li>
+<li id="n28">ASNa, Casa Reale Amministrativa, III inventario, fascio 1402, "Inventario della Real Cucina di Portici," 1791, fols. 9r–14v.<a class="back" href="#r28" aria-label="Back to text">↩</a></li>
+<li id="n29">The nicknames <i>re lazzarone</i> and <i>re nasone</i> are recorded in most accounts of Ferdinand's reign.<a class="back" href="#r29" aria-label="Back to text">↩</a></li>
+<li id="n30">ASNa, Ministero della Polizia Generale, fascio 318, fasc. 44, petition of 12 July 1827.<a class="back" href="#r30" aria-label="Back to text">↩</a></li>
+<li id="n31">Reggia di Caserta, "Il Giardino Inglese."<a class="back" href="#r31" aria-label="Back to text">↩</a></li>
+<li id="n32">Archivio Storico della Reggia di Caserta, Amministrazione, busta 811, memorandum of 3 November 1864.<a class="back" href="#r32" aria-label="Back to text">↩</a></li>
+<li id="n33">Zachary Nowak, "Folklore, Fakelore, History: Invented Tradition and the Origins of the Pizza Margherita," <i>Food, Culture &amp; Society</i> 17, no. 1 (2014): 103–24.<a class="back" href="#r33" aria-label="Back to text">↩</a></li>
+<li id="n34">Carol Helstosky, <i>Garlic and Oil: Food and Politics in Italy</i> (Oxford: Berg, 2004); Touring Club Italiano, <i>Guida gastronomica d'Italia</i> (Milan, 1931).<a class="back" href="#r34" aria-label="Back to text">↩</a></li>
+<li id="n35">The monopoly was established under the Ministry of the Colonies, with its seat at Genoa, and survived in modified form until the 1960s. See Sergio Salvi, "Banane fasciste: breve storia della banana italica ai tempi dell'autarchia."<a class="back" href="#r35" aria-label="Back to text">↩</a></li>
+<li id="n36">F. T. Marinetti and Fillìa, <i>La cucina futurista</i> (Milan: Sonzogno, 1932); English translation by Suzanne Brill, <i>The Futurist Cookbook</i> (1989).<a class="back" href="#r36" aria-label="Back to text">↩</a></li>
+<li id="n37">Law of 23 December 1940, no. 2042. The resulting lists, published by the Accademia's Commissione per l'italianità della lingua between 1941 and 1943, are collected in Alberto Raffaelli, <i>Le parole straniere sostituite dall'Accademia d'Italia (1941–43)</i> (Rome: Aracne, 2010).<a class="back" href="#r37" aria-label="Back to text">↩</a></li>
+<li id="n38">ASNa, Prefettura, Gabinetto, II versamento, busta 1733, circular of 14 April 1938.<a class="back" href="#r38" aria-label="Back to text">↩</a></li>
+<li id="n39">Allied Forces Southern Europe established its headquarters in Naples in 1951.<a class="back" href="#r39" aria-label="Back to text">↩</a></li>
+<li id="n40">On the Hawaiian canning industry and the mass market for tinned pineapple, see Beauman, <i>The Pineapple</i>.<a class="back" href="#r40" aria-label="Back to text">↩</a></li>
+<li id="n41">Minutes of a meeting of 9 February 1953, private collection, Naples. I am grateful to the owner for permission to consult them.<a class="back" href="#r41" aria-label="Back to text">↩</a></li>
+<li id="n42">Ugo Mastrangelo, "La pizza e gli stranieri," <i>La Voce di Partenope</i>, 22 May 1955.<a class="back" href="#r42" aria-label="Back to text">↩</a></li>
+<li id="n43">Minutes of a meeting of 11 October 1955, and G. Russomanno to N. Russomanno, letters of 1955–57, in the private collection cited in note 41.<a class="back" href="#r43" aria-label="Back to text">↩</a></li>
+<li id="n44">"Sam Panopoulos," <i>The Canadian Encyclopedia</i> (2023); on his visits to Windsor to watch pizza being made, see also the obituaries of June 2017 and his interview with CBC Radio-Canada in February of that year.<a class="back" href="#r44" aria-label="Back to text">↩</a></li>
+<li id="n45">Ugo Mastrangelo, "La pizza ha un padre," <i>La Voce di Partenope</i>, 3 March 1968; N. Russomanno to G. Russomanno, undated [c. 1968], private collection cited in note 41.<a class="back" href="#r45" aria-label="Back to text">↩</a></li>
+<li id="n46">Commission Regulation (EU) No 97/2010 of 4 February 2010, <i>Official Journal of the European Union</i> L 34, 5 February 2010, 7–16; UNESCO, "Art of Neapolitan 'Pizzaiuolo'," inscribed on the Representative List of the Intangible Cultural Heritage of Humanity in 2017.<a class="back" href="#r46" aria-label="Back to text">↩</a></li>
+<li id="n47">Regulation (EU) No 97/2010, Annex I.<a class="back" href="#r47" aria-label="Back to text">↩</a></li>
+<li id="n48">Eric Hobsbawm and Terence Ranger, eds., <i>The Invention of Tradition</i> (Cambridge: Cambridge University Press, 1983).<a class="back" href="#r48" aria-label="Back to text">↩</a></li>
+</ol>
+</section>
+
+</main>
+</body>
+</html>
